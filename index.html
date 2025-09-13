@@ -5,59 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BattleFish – Fishing School, Battle Games & BFCC</title>
   <meta name="description" content="BattleFish – Fishing School, Battle Games, BFCC, Ankaufliste & Preise, Kunden-Storys und Blog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="Logo.JPG">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
-  <div class="container flex between">
-    <a class="brand" href="#home">🐟 BattleFish</a>
-    <nav class="nav">
+  <div class="container header-inner">
+    <a class="brand" href="#home"><img src="Logo.JPG" alt="BattleFish Logo" class="logo"></a>
+    <button class="burger" aria-controls="nav" aria-expanded="false">☰</button>
+    <nav id="nav" class="nav">
       <a href="#school">Fishing School</a>
       <a href="#games">Battle Games</a>
       <a href="#bfcc">BFCC</a>
       <a href="#prices">Ankauf & Preise</a>
-      <a href="#stories">Storys</a>
-      <a href="#blog">Blog</a>
+      <a href="#downloads">Flyer</a>
       <a href="#contact" class="btn">Kontakt</a>
     </nav>
   </div>
 </header>
 
 <main id="home">
-  <section class="hero">
+  <!-- Hero mit Banner -->
+  <section class="hero hero-banner">
     <div class="container">
       <h1>Catch &amp; Conquer</h1>
-      <p>Fishing School, kompetitive Battle Games &amp; der BFCC – hier findest du Termine, Regeln, Preise und News.</p>
+      <p>Fishing School, kompetitive Battle Games &amp; der BFCC – Termine, Regeln, Preise und News.</p>
       <div class="cta-row">
         <a class="btn" href="#school">Kurs buchen</a>
-        <a class="btn outline" href="#prices">Ankauf &amp; Preise</a>
-        <a class="btn outline" href="#bfcc">BFCC Infos</a>
+        <a class="btn ghost" href="#prices">Ankauf &amp; Preise</a>
+        <a class="btn ghost" href="#bfcc">BFCC Infos</a>
       </div>
     </div>
   </section>
 
+  <!-- Fishing School -->
   <section id="school" class="section">
     <div class="container">
       <h2>Fishing School</h2>
-      <p>Was du lernst: Basics, Gerätekunde, Spots, Sicherheit auf dem Wasser und waidgerechtes Töten. Inklusive Fun Facts zu Marlin, Hammerhai, Hummer &amp; Arowana.</p>
-      <ul class="checklist">
-        <li>Einführung &amp; Ausrüstung</li>
-        <li>Waidgerechtes Töten (Schritt-für-Schritt)</li>
-        <li>Fischkunde &amp; Spots</li>
-        <li>Praxis auf dem Wasser</li>
-      </ul>
-      <p><strong>Nächster Termin:</strong> siehe <a href="#blog">News</a> oder trage dich in den Newsletter ein.</p>
-      <a class="btn" href="#contact">Anmelden</a>
+      <p>Basics, Gerätekunde, Spots, Sicherheit und waidgerechtes Töten – praxisnah und fair.</p>
+      <div class="list-inline">
+        <span>Einführung</span><span>Waidgerecht</span><span>Fischkunde</span><span>Praxis</span>
+      </div>
     </div>
   </section>
 
+  <!-- Battle Games -->
   <section id="games" class="section alt">
     <div class="container">
       <h2>Battle Games</h2>
-      <p>Monatliche Wettbewerbe mit fairen Regeln und Leaderboard. Solo oder Team – zeig, was du kannst.</p>
       <div class="grid two">
         <div>
-          <h3>Regeln (Kurz)</h3>
+          <h3>Regeln</h3>
           <ol>
             <li>Anmeldung bis Vortag 18:00</li>
             <li>Wertungen: Gewicht, Seltenheit, Bonusziele</li>
@@ -65,7 +66,7 @@
           </ol>
         </div>
         <div>
-          <h3>Preise (Beispiele)</h3>
+          <h3>Preise</h3>
           <ul>
             <li>Champion Title &amp; Trophäe</li>
             <li>Gutscheine / Sponsorenpreise</li>
@@ -76,26 +77,21 @@
     </div>
   </section>
 
+  <!-- BFCC -->
   <section id="bfcc" class="section">
     <div class="container">
       <h2>BFCC – BattleFish Combat Cup</h2>
       <p>Infos, Klassen/Regeln, Sicherheitsregeln und Highlights der Kampfveranstaltung. (Mehr in Kürze.)</p>
-      <div class="info-card">
-        <p><strong>Sicherheit:</strong> klare Regeln &amp; Aufsicht. Disziplin- und Fairnessprinzip.</p>
-      </div>
     </div>
   </section>
 
+  <!-- Preise -->
   <section id="prices" class="section alt">
     <div class="container">
-      <h2>Ankauf &amp; Preise</h2>
-      <p>Transparente Listenpreise – schnell, fair, unkompliziert.</p>
-      <p class="muted">Stand: 11.08.2025</p>
+      <h2>Ankauf &amp; Preise <small class="muted">Stand: 11.08.2025</small></h2>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr><th>Fisch</th><th>Preis ($)</th></tr>
-          </thead>
+          <thead><tr><th>Fisch</th><th>Preis ($)</th></tr></thead>
           <tbody>
             <tr><td>Sardine</td><td>775</td></tr>
             <tr><td>Hasel</td><td>765</td></tr>
@@ -110,43 +106,35 @@
           </tbody>
         </table>
       </div>
-      <p class="muted small">Hinweis: Preise können je nach Event/Abnahme variieren.</p>
+      <p style="margin:1rem 0;">
+        <a class="btn" href="Ankaufliste.pdf" target="_blank" rel="noopener">Preisliste als PDF öffnen</a>
+      </p>
+      <div class="pdf-wrap">
+        <iframe src="Ankaufliste.pdf#view=FitH" title="BattleFish Ankaufliste" loading="lazy"></iframe>
+      </div>
+      <noscript><p><img src="Ankaufliste.png" alt="Ankaufliste"></p></noscript>
     </div>
   </section>
 
-  <section id="stories" class="section">
+  <!-- Flyer -->
+  <section id="downloads" class="section">
     <div class="container">
-      <h2>Kunden-Storys</h2>
-      <p>Kurze Erfolgsgeschichten &amp; Zitate. Sende uns dein Foto + Einverständnis, dann featuren wir dich hier.</p>
-      <div class="grid three cards">
-        <article class="card">
-          <h3>„Erster Marlin!“</h3>
-          <p>„Dank Fishing School hab ich meinen ersten Marlin gelandet – unfassbar!“ – D.D.</p>
-        </article>
-        <article class="card">
-          <h3>Expo. Pier Deal</h3>
-          <p>Großverkauf mit sauberer Abwicklung – so macht Handel Spaß.</p>
-        </article>
-        <article class="card">
-          <h3>Team-Sieg</h3>
-          <p>Unser Squad hat die Battle Games gerockt – nächstes Mal verteidigen wir!</p>
-        </article>
+      <h2>Flyer &amp; Downloads</h2>
+      <div class="grid two">
+        <div>
+          <h3>BattleFish Games – Flyer</h3>
+          <img class="card" src="BattleFish.png" alt="BattleFish Games Flyer">
+        </div>
+        <div>
+          <h3>Fishing School – Flyer</h3>
+          <img class="card" src="Fishing-School.png" alt="Fishing School Flyer">
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="blog" class="section alt">
-    <div class="container">
-      <h2>Blog &amp; News</h2>
-      <p>Event-Ankündigungen, Recaps, Regel-Updates und Community-News.</p>
-      <ul class="list">
-        <li><strong>[Beispiel]</strong> Fishing School – neue Termine ab Oktober.</li>
-        <li><strong>[Beispiel]</strong> BFCC – Sicherheitsregeln veröffentlicht.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
+  <!-- Kontakt -->
+  <section id="contact" class="section alt">
     <div class="container">
       <h2>Kontakt</h2>
       <p>BattleFish Inc. – Catch &amp; Conquer<br>Barbareno Road, Chumash, Los Santos<br>Telefon: 103539</p>
@@ -158,20 +146,27 @@
         <label>Nachricht<textarea name="message" rows="5" required></textarea></label>
         <button class="btn" type="submit">Senden</button>
       </form>
-      <p class="muted small">Mit dem Senden stimmst du der Verarbeitung gemäß Datenschutz zu.</p>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container flex between">
+  <div class="container foot">
     <small>© 2025 BattleFish</small>
-    <div class="links">
-      <a href="#impressum">Impressum</a>
-      <a href="#datenschutz">Datenschutz</a>
-    </div>
+    <nav class="foot-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
   </div>
 </footer>
 
+<script>
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('#nav');
+if (burger && nav){ burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+});}
+</script>
 </body>
 </html>
