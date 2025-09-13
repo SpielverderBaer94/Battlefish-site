@@ -21,14 +21,13 @@
       <a href="#games">Battle Games</a>
       <a href="#bfcc">BFCC</a>
       <a href="#prices">Ankauf & Preise</a>
-      <a href="#downloads">Flyer</a>
       <a href="#contact" class="btn">Kontakt</a>
     </nav>
   </div>
 </header>
 
 <main id="home">
-  <!-- Hero mit Banner -->
+  <!-- HERO mit Banner 2 -->
   <section class="hero hero-banner">
     <div class="container">
       <h1>Catch &amp; Conquer</h1>
@@ -41,22 +40,29 @@
     </div>
   </section>
 
-  <!-- Fishing School -->
+  <!-- Fishing School (mit Bild) -->
   <section id="school" class="section">
     <div class="container">
       <h2>Fishing School</h2>
-      <p>Basics, Gerätekunde, Spots, Sicherheit und waidgerechtes Töten – praxisnah und fair.</p>
-      <div class="list-inline">
-        <span>Einführung</span><span>Waidgerecht</span><span>Fischkunde</span><span>Praxis</span>
+      <div class="grid two v-center">
+        <div>
+          <p>Basics, Gerätekunde, Spots, Sicherheit und waidgerechtes Töten – praxisnah und fair.</p>
+          <div class="list-inline">
+            <span>Einführung</span><span>Waidgerecht</span><span>Fischkunde</span><span>Praxis</span>
+          </div>
+        </div>
+        <div>
+          <img class="card" src="Fishing%20School.png" alt="Fishing School Poster">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Battle Games -->
+  <!-- Battle Games (mit Bild) -->
   <section id="games" class="section alt">
     <div class="container">
       <h2>Battle Games</h2>
-      <div class="grid two">
+      <div class="grid two v-start">
         <div>
           <h3>Regeln</h3>
           <ol>
@@ -64,14 +70,15 @@
             <li>Wertungen: Gewicht, Seltenheit, Bonusziele</li>
             <li>Fairplay &amp; Safety first</li>
           </ol>
-        </div>
-        <div>
           <h3>Preise</h3>
           <ul>
             <li>Champion Title &amp; Trophäe</li>
             <li>Gutscheine / Sponsorenpreise</li>
             <li>BattleFish-Merch</li>
           </ul>
+        </div>
+        <div>
+          <img class="card" src="BattleFish.png" alt="BattleFish Games Poster">
         </div>
       </div>
     </div>
@@ -85,56 +92,22 @@
     </div>
   </section>
 
-  <!-- Preise -->
+  <!-- Ankauf & Preise: Bild statt Tabelle -->
   <section id="prices" class="section alt">
     <div class="container">
       <h2>Ankauf &amp; Preise <small class="muted">Stand: 11.08.2025</small></h2>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Fisch</th><th>Preis ($)</th></tr></thead>
-          <tbody>
-            <tr><td>Sardine</td><td>775</td></tr>
-            <tr><td>Hasel</td><td>765</td></tr>
-            <tr><td>Hering</td><td>750</td></tr>
-            <tr><td>Barsch</td><td>775</td></tr>
-            <tr><td>Krebs</td><td>770</td></tr>
-            <tr><td>Muscheln</td><td>85</td></tr>
-            <tr><td>Hummer</td><td>1935</td></tr>
-            <tr><td>Arowana</td><td>1890</td></tr>
-            <tr><td>Marlin</td><td>1940</td></tr>
-            <tr><td>Hammerhai</td><td>1940</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="margin:1rem 0;">
+
+      <p style="margin:.5rem 0 1rem;">
         <a class="btn" href="Ankaufliste.pdf" target="_blank" rel="noopener">Preisliste als PDF öffnen</a>
       </p>
-      <div class="pdf-wrap">
-        <iframe src="Ankaufliste.pdf#view=FitH" title="BattleFish Ankaufliste" loading="lazy"></iframe>
-      </div>
-      <noscript><p><img src="Ankaufliste.png" alt="Ankaufliste"></p></noscript>
-    </div>
-  </section>
 
-  <!-- Flyer -->
-  <section id="downloads" class="section">
-    <div class="container">
-      <h2>Flyer &amp; Downloads</h2>
-      <div class="grid two">
-        <div>
-          <h3>BattleFish Games – Flyer</h3>
-          <img class="card" src="BattleFish.png" alt="BattleFish Games Flyer">
-        </div>
-        <div>
-          <h3>Fishing School – Flyer</h3>
-          <img class="card" src="Fishing-School.png" alt="Fishing School Flyer">
-        </div>
-      </div>
+      <img class="card full" src="Ankaufliste.png" alt="Ankaufliste (Bild)">
+      <p class="muted small">Falls die Vorschau nicht lädt: <a href="Ankaufliste.pdf" target="_blank" rel="noopener">hier direkt öffnen</a>.</p>
     </div>
   </section>
 
   <!-- Kontakt -->
-  <section id="contact" class="section alt">
+  <section id="contact" class="section">
     <div class="container">
       <h2>Kontakt</h2>
       <p>BattleFish Inc. – Catch &amp; Conquer<br>Barbareno Road, Chumash, Los Santos<br>Telefon: 103539</p>
@@ -163,10 +136,12 @@
 <script>
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('#nav');
-if (burger && nav){ burger.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-});}
+if (burger && nav){
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
 </script>
 </body>
 </html>
