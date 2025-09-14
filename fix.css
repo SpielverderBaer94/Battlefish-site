@@ -1,0 +1,49 @@
+/* ===== BF RESCUE CSS: nur Banner & Header, unabhängig von style.css ===== */
+
+/* Header-Fallback (damit Buttons/Abstände nicht kaputt aussehen) */
+.site-header{
+  position:sticky; top:0;
+  background:#fff;
+  border-bottom:3px solid #6395b0;
+  z-index:20;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.logo{height:36px;width:auto;display:block}
+
+/* Banner (Hero) — nimmt sicher banner2.png */
+.hero.hero-banner{
+  background-image:
+    linear-gradient(to bottom, rgba(99,149,176,.75), rgba(99,149,176,.75)),
+    url("banner2.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 52vh;
+  display:flex;
+  align-items:center;
+  color:#fff;
+}
+/* Falls du lieber 'Banner 2.png' mit Leerzeichen verwendest, nimm stattdessen:
+.hero.hero-banner{
+  background-image:
+    linear-gradient(to bottom, rgba(99,149,176,.75), rgba(99,149,176,.75)),
+    url("Banner%202.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 52vh;
+  display:flex; align-items:center; color:#fff;
+}
+*/
+
+/* Mobile-Menu Notfall */
+.burger{display:none;background:none;border:none;font-size:1.5rem}
+@media (max-width:900px){
+  .burger{display:block;color:#333}
+  .nav{display:none;position:absolute;top:56px;right:0;background:#fff;
+    border:1px solid #c0c0c0;border-right:none;border-top:none;
+    padding:.6rem 1rem;border-bottom-left-radius:12px}
+  .nav.open{display:block}
+  .nav a{display:block;padding:.7rem 0}
+  .logo{height:30px}
+}
+
+/* ===== Ende Rescue CSS ===== */
